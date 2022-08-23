@@ -1,0 +1,10 @@
+
+p {
+    text-align: left;
+    width: calc(100% - 16pt);
+}
+
+header p {
+    text-align: center;
+}
+
