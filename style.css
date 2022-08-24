@@ -95,7 +95,8 @@ div.drawer .gone {
     align-items: stretch;
 }
 
-#downloads a {
+#downloads > div > * {
+    display: flex;
     text-decoration: none;
     color: black;
     background: white;
@@ -104,7 +105,25 @@ div.drawer .gone {
     font-size: 1.2rem;
     font-weight: 500;
     border-radius: 16pt;
+    justify-content: center;
+}
 
+#downloads div span {
+    display: flex;
+    justify-items: stretch;
+    align-items: stretch;
+    overflow: hidden;
+    padding: 0;
+}
+
+#downloads div span > * {
+    display: flex;
+    flex: 1 0;
+    height: 100%;
+    padding-top: 8pt;
+    padding-bottom: 8pt;
+    text-decoration: none;
+    color: black;
 }
 
 article a {
