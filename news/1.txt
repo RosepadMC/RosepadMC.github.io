@@ -1,0 +1,9 @@
+Website rewamp
+
+Did you know you could use EJS for XML? Now you do
+
+I decided to move from plain HTML to EJS so everything'll be easier to maintain. Also fixed fonts and added an RSS feed. Main page still isn't fixed tho (and I might have broken timestamps n stuff but whatever, I'll fix them next time) :D
+
+I have no idea how to write a long news item so that's all :v
+
+Also, for everybody unaware, we have a discord now https://discord.gg/k6M9tNrkfN.

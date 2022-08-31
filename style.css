@@ -11,6 +11,7 @@ body {
     justify-content: baseline;
     align-items: center;
     flex: 0 1;
+    font: 18pt 'Ubuntu', sans-serif;
 }
 
 nav {
@@ -49,6 +50,11 @@ div.spacer2 {
 h1 {
     color: #f44;
     text-shadow: 0 0 2pt #f44;
+    font-family: 'Comfortaa', cursive;
+}
+
+h2 {
+    font-family: 'Comfortaa', cursive;
 }
 
 div.drawer {
