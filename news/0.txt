@@ -1,0 +1,9 @@
+Rosepad website released!
+
+Cuz y not
+
+I thought it might be neccessary, nobody said no, and so I did, and now it's here.
+
+Here I might be publishing updates n stuff when I'm bored. This website is pure html and css, and will remain this way for eternity cuz I couldn't be bothered to add ejs to this whole mess.
+
+I might add an RSS feed but no promises.

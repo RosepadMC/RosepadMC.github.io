@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Q&amp;A</title>
+        <title><%= title %></title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="FAQ or whatever you want to call it">
+        <meta name="description" content="<%= description %>">
         <link rel="stylesheet" href="/style.css?v=2">
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="https://rosepadmc.github.io/feed.rss">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,26 +14,17 @@
     </head>
     <body>
         <nav>
-            <a  href="/">Home</a>
-            <a  href="/news.html">News</a>
-            <a class="here" href="/qna.html">Q&amp;A</a>
+            <a <% if (fragment == "index") { %>class="here"<% } %> href="/">Home</a>
+            <a <% if (fragment == "news") { %>class="here"<% } %> href="/news.html">News</a>
+            <a <% if (fragment == "qna") { %>class="here"<% } %> href="/qna.html">Q&amp;A</a>
         </nav>
         <div class="spacer"></div>
         <header>
-            <h1>Q&amp;A</h1>
+            <h1><%= title %></h1>
             <p>
-                FAQ or whatever you want to call it
+                <%= description %>
             </p>
         </header>
-        <div class=spacer2></div>
-<header id="are-jars-safe">
-    <p class="q">
-        Q: Are jars from alphaver channel safe?
-    </p>
-    <p class="a">
-        A: Yes, they are completely safe.
-    </p>
-</header>
-
+        <%- await include(`pages/${fragment}`, { require, ...forward }) %>
     </body>
 </html>
