@@ -1,0 +1,10 @@
+Release Candidates for 1.1.0.6 beta
+
+After months of development we've finally decided to test things
+
+After months of development we (the Rosepad team of one person) have finally decided to test things before publishing the beta.
+Download dev release here ☞ https://nightly.link/RosepadMC/Rosepad/workflows/main/master
+
+If you find any issues, be sure to report them here https://github.com/RosepadMC/Rosepad/issues (be sure to check if anybody had that issue as well).
+You can find test server IP on our discord server: https://discord.gg/k6M9tNrkfN
+
