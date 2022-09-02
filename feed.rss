@@ -7,6 +7,12 @@
         
         
             <item>
+                <title>Release Candidates for 1.1.0.6 beta</title>
+                <description>After months of development we&#39;ve finally decided to test things</description>
+                <link>https://rosepadmc.github.io/news/2.html</link>
+            </item>
+        
+            <item>
                 <title>Website rewamp</title>
                 <description>Did you know you could use EJS for XML? Now you do</description>
                 <link>https://rosepadmc.github.io/news/1.html</link>
