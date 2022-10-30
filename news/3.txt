@@ -1,0 +1,3 @@
+Dev beta needs testing
+
+Testing needs to be done for the doors update. Download the latest beta at https://nightly.link/RosepadMC/Rosepad/workflows/main/master
