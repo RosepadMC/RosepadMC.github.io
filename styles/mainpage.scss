@@ -1,0 +1,81 @@
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1 0;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: stretch;
+    flex: 1 0;
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        min-width: calc(min(400pt, 90%));
+        flex: 1 0;
+        text-align: left;
+        margin: 2pt;
+        border-radius: 10pt;
+        border: 2pt solid #fff;
+        padding: 4pt;
+
+        h2 {
+            text-align: center;
+        }
+    }
+}
+
+#downloads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#downloads > .alist {
+    width: 60%;
+
+    a {
+        text-decoration: none;
+        font: var(--font);
+        color: var(--background);
+
+        transition: 0.4s ease-in-out;
+
+        &:hover {
+            filter: brightness(120%);
+            color: var(--text-color);
+        }
+    }
+
+    > a, span {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 3rem;
+        border-radius: 3rem;
+        overflow: hidden;
+        margin-top: 6pt;
+    }
+
+    span {
+        justify-content: stretch;
+        align-items: stretch;
+
+        a {
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
+
+        a:first-child {
+            justify-content: end;
+        }
+    }
+}

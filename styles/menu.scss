@@ -1,0 +1,217 @@
+
+body > nav {
+    position: fixed;
+
+    user-select: none;
+
+    top: 0;
+    left: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--color-brand);
+    border-bottom-right-radius: 100%;
+
+    animation: MENU-ANIMATION 0.7s ease-in-out infinite alternate;
+
+    > .helper { // Circle thing (cuz transitions suck)
+        display: block;
+        position: fixed;
+        background: var(--color-brand);
+        border-bottom-right-radius: 100%;
+
+        top: 0;
+        left: 0;
+        width: 3rem;
+        height: 3rem;
+
+        transition: all 0.5s cubic-bezier(1, 0.3, 0.8, 1);
+    }
+
+    &:hover > .helper {
+        width: 8rem;
+        height: 10rem;
+    }
+
+    > .helper2 { // Ellipse thing
+        display: block;
+        position: fixed;
+
+        background: var(--color-brand);
+        border-radius: 50%;
+
+        top: 10rem;
+        left: 5rem;
+        width: 0;
+        height: 0;
+
+        transition: all 0.5s cubic-bezier(1, 0.3, 0.8, 1);
+    }
+
+    &:hover > .helper2 {
+        width: 4rem;
+        height: 4rem;
+        top: 11rem;
+        left: 5rem;
+    }
+
+    > .helper3 { // Ellipse thing
+        display: block;
+        position: fixed;
+
+        background: var(--color-brand);
+        border-radius: 50%;
+
+        top: 13rem;
+        left: 3rem;
+        width: 0;
+        height: 0;
+
+        transition: all 0.5s cubic-bezier(1, 0.3, 0.8, 1);
+    }
+
+    &:hover > .helper3 {
+        width: 2rem;
+        height: 2rem;
+        top: 17rem;
+        left: 4rem;
+    }
+
+    > .helper4 { // Background
+        display: block;
+        position: fixed;
+
+        background: #000c;
+        border-bottom-right-radius: 100%;
+
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+
+        transition: all 0.5s cubic-bezier(1, 0.3, 0.8, 1);
+    }
+
+    &:hover > .helper4 {
+        width: 20rem;
+        height: 26rem;
+    }
+
+    .alist {
+        transition: 0.3s ease-in-out;
+    }
+
+    .alist > a {
+        color: var(--color-text);
+    }
+
+    .alist:hover > a {
+        color: var(--color-text-1);
+    }
+
+    .alist:hover > a:hover {
+        color: var(--color-text);
+    }
+
+    a {
+        position: fixed;
+        text-decoration: none;
+        // text-shadow: 0 0 4pt var(--background);
+        left: -10rem;
+
+        transition: all 0.5s cubic-bezier(1, 0.3, 0.8, 1);
+    }
+
+    .alist a::before {
+        content: "";
+        display: inline-block;
+        transition: 0.5s ease-in-out;
+        width: 0;
+    }
+
+    a.here::before {
+        width: 0.5rem;
+    }
+
+    &:hover a {
+        left: 2rem;
+    }
+
+    & > a {
+        left: -20rem;
+        color: var(--color-brand);
+        filter: brightness(50%);
+        transition: 0.7s ease-in-out;
+    }
+
+    & > a:hover {
+        filter: brightness(150%);
+    }
+
+    &:hover > a {
+        left: 1rem;
+    }
+
+    & .alist a:hover::before {
+        width: 1rem;
+    }
+
+    > img {
+        image-rendering: crisp-edges;
+        position: fixed;
+        color: var(--color-text);
+
+        width: 2rem;
+        height: 2rem;
+        top: 0.2rem;
+        left: 0.2rem;
+
+        pointer-events: none;
+
+        transition: all 0.45s cubic-bezier(1, 0.3, 0.7, 1);
+    }
+
+    &:hover > img {
+        width: 3rem;
+        height: 3rem;
+        left: 10rem;
+        top: 0.5rem;
+    }
+
+    > span {
+        font-size: 1.5em;
+        position: fixed;
+        color: var(--color-text);
+        text-decoration: none;
+        // text-shadow: 0 0 4pt var(--color-text);
+        top: 0.5rem;
+        left: -10rem;
+
+        transition: all 0.5s cubic-bezier(1, 0.3, 0.8, 1);
+    }
+
+    &:hover > span {
+        left: 1rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+@keyframes MENU-ANIMATION {
+    from {
+        width: 3rem;
+        height: 3rem;
+    }
+    to {
+        width: 3.500rem;
+        height: 3.500rem;
+    }
+}
+
+@keyframes MENU-ANIMATION-HOVER {
+    to {
+        width: 4rem;
+        height: 4rem;
+    }
+}

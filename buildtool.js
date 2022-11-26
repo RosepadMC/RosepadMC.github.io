@@ -1,5 +1,8 @@
 const { renderFile } = require("ejs");
 const { rm, readFile, writeFile, mkdir, cp, readdir } = require("fs/promises");
+const purify = require("dompurify");
+const { marked } = require("marked");
+const { compileAsync } = require("sass");
 
 const tasks = new (class TaskManager {
     tasks = new Map();
@@ -28,11 +31,7 @@ const tasks = new (class TaskManager {
 
 // Actual tasks
 
-async function build() {
-    await rm(`${__dirname}/build`, { recursive: true, force: true });
-    const root = `${__dirname}/pages`;
-    await mkdir(`${__dirname}/build`);
-
+async function buildPages(root) {
     for (const name of ["index", "qna", "news"]) {
         const string = await renderFile(
             `${__dirname}/template.ejs`,
@@ -50,26 +49,25 @@ async function build() {
         );
         await writeFile(`${__dirname}/build/${name}.html`, string);
     }
+}
 
-    await mkdir(`${__dirname}/build/news`);
+async function buildNews() {
+    await mkdir(`${__dirname}/build/news`, { recursive: true });
     for (const news of await readdir(`${__dirname}/news`).then((a) =>
         a.sort((a, b) => Number(a.split(".")[0]) - Number(b.split(".")[0]))
     )) {
-        const [title, description, ...paragraphs] = await readFile(
-            `${__dirname}/news/${news}`,
-            "utf8"
-        )
-            .then((content) => content.split(/\n{2,}/g))
-            .then((a) => a.map((a) => a.trim()).filter((a) => a.length));
         const string = await renderFile(
             `${__dirname}/template.ejs`,
             {
                 require,
                 fragment: "display-news",
-                title,
-                description,
+                title: "placeholder",
+                description: "placeholder",
                 forward: {
-                    paragraphs,
+                    html: await marked(await readFile(
+                        `${__dirname}/news/${news}`,
+                        "utf8"
+                    ), { async: true, silent: true, sanitize: true, sanitizer: purify.sanitize }),
                 },
             },
             {
@@ -77,7 +75,7 @@ async function build() {
             }
         );
         await writeFile(
-            `${__dirname}/build/news/${news.replace(/\.txt/, ".html")}`,
+            `${__dirname}/build/news/${news.replace(/\.md/, ".html")}`,
             string
         );
     }
@@ -95,9 +93,31 @@ async function build() {
         );
         await writeFile(`${__dirname}/build/feed.rss`, string);
     }
+}
 
-    await cp(`${__dirname}/style.css`, `${__dirname}/build/style.css`);
-    await cp(`${__dirname}/article.css`, `${__dirname}/build/article.css`);
+async function buildCSS(root) {
+    await compileAsync(`${__dirname}/style.scss`)
+        .then($ => writeFile(`${root}/style.css`, $.css));
+    await compileAsync(`${__dirname}/article.scss`)
+        .then($ => writeFile(`${root}/article.css`, $.css));
+}
+
+async function build() {
+    await rm(`${__dirname}/build`, { recursive: true, force: true });
+    const root = `${__dirname}/pages`;
+    await mkdir(`${__dirname}/build`);
+
+    await Promise.all([
+        buildCSS(`${__dirname}/build`),
+        buildNews().then(_ => buildPages(root)),
+        (async () => {
+            await mkdir(`${__dirname}/build/img`);
+            await cp(`${__dirname}/img`, `${__dirname}/build/img`, {
+                recursive: true,
+                force: true,
+            });
+        })(),
+    ]);
 }
 tasks.register(build);
 

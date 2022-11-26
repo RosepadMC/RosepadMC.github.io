@@ -1,4 +1,5 @@
 
+/*
 html {
     background: black;
     color: white;
@@ -147,4 +148,41 @@ article time {
 .q {
     color: #aaa;
 }
+*/
 
+@import "styles/menu.scss";
+@import "styles/mainpage.scss";
+@import "styles/news.scss";
+@import "styles/qna.scss";
+
+:root {
+    --background: #0b0000;
+    --color-text: #fff;
+    --color-text-1: #aaa;
+    --color-brand: rgb(240, 44, 76);
+    --color-brand-1: rgb(211, 34, 63);
+    --font: 1.4rem "Ubuntu", monospace;
+
+    --link-color: #aaf;
+
+    --ext-lilypad: #5c5;
+    --ext-lb: #080;
+    --ext-lpuj: #47c;
+    --ext-lpujs: #49c;
+}
+
+body {
+    font: var(--font);
+    background: var(--background);
+    color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+subh1 {
+    text-align: center;
+    display: block;
+    margin: 12pt;
+}

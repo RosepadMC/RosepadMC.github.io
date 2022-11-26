@@ -1,0 +1,31 @@
+
+.qna {
+    text-align: center;
+
+    a {
+        color: var(--link-color)
+    }
+
+    .a {
+        background: #fff2;
+        border: 4pt;
+        border-radius: 8pt;
+        margin: 8pt;
+        margin-top: 0;
+        margin-left: 30pt;
+        padding: 0.3rem;
+        border-left: solid #fff3;
+        border-top-left-radius: 2pt;
+        border-bottom-left-radius: 2pt;
+    }
+
+    .code {
+        padding: 3pt;
+        border-radius: 2pt;
+        display: inline-block;
+        background: black;
+        color: white;
+        font-family: monospace;
+        margin: 2pt;
+    }
+}

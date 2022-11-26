@@ -9,7 +9,7 @@
             news = news.map(a => Number(a.split(".")[0]));
             news = news.sort((a, b) => b - a);
             news = await Promise.all(news.map(
-                a => require("fs/promises").readFile(`${__dirname}/news/${a}.txt`, 'utf8')
+                a => require("fs/promises").readFile(`${__dirname}/news/${a}.md`, 'utf8')
                     .then(b => [a, b])
             ));
             news = news.map(

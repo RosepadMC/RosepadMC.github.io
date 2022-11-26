@@ -1,0 +1,5 @@
+{
+    "watch": ["pages/*", "news/*", "*.scss"],
+    "ext": "*",
+    "exec": "yarn run build && python -m http.server -d build #"
+}
