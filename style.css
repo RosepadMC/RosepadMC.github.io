@@ -1,4 +1,4 @@
-
+/*
 html {
     background: black;
     color: white;
@@ -147,4 +147,310 @@ article time {
 .q {
     color: #aaa;
 }
+*/
+body > nav {
+  position: fixed;
+  user-select: none;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  background: var(--color-brand);
+  border-bottom-right-radius: 100%;
+  animation: MENU-ANIMATION 0.7s ease-in-out infinite alternate;
+}
+body > nav > .helper {
+  display: block;
+  position: fixed;
+  background: var(--color-brand);
+  border-bottom-right-radius: 100%;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  transition: all 0.5s cubic-bezier(1, 0.3, 0.8, 1);
+}
+body > nav:hover > .helper {
+  width: 8rem;
+  height: 10rem;
+}
+body > nav > .helper2 {
+  display: block;
+  position: fixed;
+  background: var(--color-brand);
+  border-radius: 50%;
+  top: 10rem;
+  left: 5rem;
+  width: 0;
+  height: 0;
+  transition: all 0.5s cubic-bezier(1, 0.3, 0.8, 1);
+}
+body > nav:hover > .helper2 {
+  width: 4rem;
+  height: 4rem;
+  top: 11rem;
+  left: 5rem;
+}
+body > nav > .helper3 {
+  display: block;
+  position: fixed;
+  background: var(--color-brand);
+  border-radius: 50%;
+  top: 13rem;
+  left: 3rem;
+  width: 0;
+  height: 0;
+  transition: all 0.5s cubic-bezier(1, 0.3, 0.8, 1);
+}
+body > nav:hover > .helper3 {
+  width: 2rem;
+  height: 2rem;
+  top: 17rem;
+  left: 4rem;
+}
+body > nav > .helper4 {
+  display: block;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom-right-radius: 100%;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  transition: all 0.5s cubic-bezier(1, 0.3, 0.8, 1);
+}
+body > nav:hover > .helper4 {
+  width: 20rem;
+  height: 26rem;
+}
+body > nav .alist {
+  transition: 0.3s ease-in-out;
+}
+body > nav .alist > a {
+  color: var(--color-text);
+}
+body > nav .alist:hover > a {
+  color: var(--color-text-1);
+}
+body > nav .alist:hover > a:hover {
+  color: var(--color-text);
+}
+body > nav a {
+  position: fixed;
+  text-decoration: none;
+  left: -10rem;
+  transition: all 0.5s cubic-bezier(1, 0.3, 0.8, 1);
+}
+body > nav .alist a::before {
+  content: "";
+  display: inline-block;
+  transition: 0.5s ease-in-out;
+  width: 0;
+}
+body > nav a.here::before {
+  width: 0.5rem;
+}
+body > nav:hover a {
+  left: 2rem;
+}
+body > nav > a {
+  left: -20rem;
+  color: var(--color-brand);
+  filter: brightness(50%);
+  transition: 0.7s ease-in-out;
+}
+body > nav > a:hover {
+  filter: brightness(150%);
+}
+body > nav:hover > a {
+  left: 1rem;
+}
+body > nav .alist a:hover::before {
+  width: 1rem;
+}
+body > nav > img {
+  image-rendering: crisp-edges;
+  position: fixed;
+  color: var(--color-text);
+  width: 2rem;
+  height: 2rem;
+  top: 0.2rem;
+  left: 0.2rem;
+  pointer-events: none;
+  transition: all 0.45s cubic-bezier(1, 0.3, 0.7, 1);
+}
+body > nav:hover > img {
+  width: 3rem;
+  height: 3rem;
+  left: 10rem;
+  top: 0.5rem;
+}
+body > nav > span {
+  font-size: 1.5em;
+  position: fixed;
+  color: var(--color-text);
+  text-decoration: none;
+  top: 0.5rem;
+  left: -10rem;
+  transition: all 0.5s cubic-bezier(1, 0.3, 0.8, 1);
+}
+body > nav:hover > span {
+  left: 1rem;
+}
+body > nav a {
+  text-decoration: none;
+}
 
+@keyframes MENU-ANIMATION {
+  from {
+    width: 3rem;
+    height: 3rem;
+  }
+  to {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+@keyframes MENU-ANIMATION-HOVER {
+  to {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1 0;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: stretch;
+  flex: 1 0;
+}
+.item-container .item {
+  display: flex;
+  flex-direction: column;
+  min-width: min(400pt, 90%);
+  flex: 1 0;
+  text-align: left;
+  margin: 2pt;
+  border-radius: 10pt;
+  border: 2pt solid #fff;
+  padding: 4pt;
+}
+.item-container .item h2 {
+  text-align: center;
+}
+
+#downloads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#downloads > .alist {
+  width: 60%;
+}
+#downloads > .alist a {
+  text-decoration: none;
+  font: var(--font);
+  color: var(--background);
+  transition: 0.4s ease-in-out;
+}
+#downloads > .alist a:hover {
+  filter: brightness(120%);
+  color: var(--text-color);
+}
+#downloads > .alist > a, #downloads > .alist span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  border-radius: 3rem;
+  overflow: hidden;
+  margin-top: 6pt;
+}
+#downloads > .alist span {
+  justify-content: stretch;
+  align-items: stretch;
+}
+#downloads > .alist span a {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+#downloads > .alist span a:first-child {
+  justify-content: end;
+}
+
+article .news-link {
+  text-decoration: none;
+  color: var(--color-text-1);
+}
+article .news-link h2 {
+  color: var(--color-text);
+}
+
+.qna {
+  text-align: center;
+}
+.qna a {
+  color: var(--link-color);
+}
+.qna .a {
+  background: rgba(255, 255, 255, 0.1333333333);
+  border: 4pt;
+  border-radius: 8pt;
+  margin: 8pt;
+  margin-top: 0;
+  margin-left: 30pt;
+  padding: 0.3rem;
+  border-left: solid rgba(255, 255, 255, 0.2);
+  border-top-left-radius: 2pt;
+  border-bottom-left-radius: 2pt;
+}
+.qna .code {
+  padding: 3pt;
+  border-radius: 2pt;
+  display: inline-block;
+  background: black;
+  color: white;
+  font-family: monospace;
+  margin: 2pt;
+}
+
+:root {
+  --background: #0b0000;
+  --color-text: #fff;
+  --color-text-1: #aaa;
+  --color-brand: rgb(240, 44, 76);
+  --color-brand-1: rgb(211, 34, 63);
+  --font: 1.4rem "Ubuntu", monospace;
+  --link-color: #aaf;
+  --ext-lilypad: #5c5;
+  --ext-lb: #080;
+  --ext-lpuj: #47c;
+  --ext-lpujs: #49c;
+}
+
+body {
+  font: var(--font);
+  background: var(--background);
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+}
+
+subh1 {
+  text-align: center;
+  display: block;
+  margin: 12pt;
+}

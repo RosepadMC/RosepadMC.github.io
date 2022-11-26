@@ -1,10 +1,8 @@
-
 p {
-    text-align: left;
-    width: calc(100% - 16pt);
+  text-align: left;
+  width: calc(100% - 16pt);
 }
 
 header p {
-    text-align: center;
+  text-align: center;
 }
-

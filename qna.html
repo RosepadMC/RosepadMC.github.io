@@ -6,7 +6,8 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="FAQ or whatever you want to call it">
-        <link rel="stylesheet" href="/style.css?v=2">
+        <link rel="icon" href="/img/rosepad.png">
+        <link rel="stylesheet" href="/style.css?v=3">
         <link rel="alternate" type="application/rss+xml" title="RSS feed" href="https://rosepadmc.github.io/feed.rss">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,19 +15,20 @@
     </head>
     <body>
         <nav>
-            <a  href="/">Home</a>
-            <a  href="/news.html">News</a>
-            <a class="here" href="/qna.html">Q&amp;A</a>
+            <div class="helper4"></div>
+            <div class="helper"></div>
+            <div class="helper2"></div>
+            <div class="helper3"></div>
+            <span>Rosepad</span><img src="/img/rosepad.png">
+            <div class="alist">
+                <a style="top: 5rem"  href="/">Home</a>
+                <a style="top: 8rem"  href="/news.html">News</a>
+                <a style="top: 11rem" class="here" href="/qna.html">Q&amp;A</a>
+            </div>
+            <a style="top: 20rem" href="https://github.com/RosepadMC/Rosepad/releases/tag/beta">Download Rosepad</a>
         </nav>
         <div class="spacer"></div>
-        <header>
-            <h1>Q&amp;A</h1>
-            <p>
-                FAQ or whatever you want to call it
-            </p>
-        </header>
-        <div class=spacer2></div>
-<header id="are-jars-safe">
+        <header class="qna" id="are-jars-safe">
     <p class="q">
         Q: Are jars from alphaver channel safe?
     </p>
@@ -34,21 +36,18 @@
         A: Yes, they are completely safe
     </p>
 </header>
-<header id="make-a-server">
+<header class="qna" id="make-a-server">
     <p class="q">
         Q: How do I make a server?
     </p>
     <p class="a">
-        A: Download JRE 8 (Java Runtime), <a href="https://github.com/RosepadMC/Rosepad/releases/download/beta/RosepadServer.jar">Rosepad server</a> and then run <pre style="background:black;color:white">java -Xmx2G -Xms512M -jar server.jar</pre>
-    </p>
-    <p class="a">
-        If you want to use bukkit plugins, try <a href="https://github.com/LilyBukkit/LilyBukkit-Core/releases/latest">LilyBukkit</a>
-    </p>
-    <p class="a">
+        A: Download JRE 8 (Java Runtime), <a href="https://github.com/RosepadMC/Rosepad/releases/download/beta/RosepadServer.jar">Rosepad server</a>
+        and then run<br><span class="code">$ java -Xmx2G -Xms512M -jar server.jar</span><br>
+        If you want to use bukkit plugins, try <a href="https://github.com/LilyBukkit/LilyBukkit-Core/releases/latest">LilyBukkit</a><br>
         <a href="https://alphaver.fandom.com/wiki/Hosting_a_server">Full tutorial here</a>
     </p>
 </header>
-<header id="is-there-hub">
+<header class="qna" id="is-there-hub">
     <p class="q">
         Q: How do I access hub?
     </p>
@@ -56,15 +55,16 @@
         A: There's no hub code in the jars, therefore you can't
     </p>
 </header>
-<header id="get-the-code-lilypad">
+<header class="qna" id="get-the-code-lilypad">
     <p class="q">
         Q: What's the code for Lilypad?
     </p>
     <p class="a">
-        A: Register <a href="https://exalpha-dev.github.io/g_registration.html">here</a> to get the code
+        A: With Rosepad you can type your username into the key field and it will generate
+        one for you. If you're using vanilla, register <a href="https://exalpha-dev.github.io/g_registration.html">here</a>
     </p>
 </header>
-<header id="which-client-should-i-use-lilypad">
+<header class="qna" id="which-client-should-i-use-lilypad">
     <p class="q">
         Q: Which client should I use?
     </p>
@@ -72,7 +72,7 @@
         A: As for now, Rosepad is the most up-to-date (and the only maintained) Lilypad client
     </p>
 </header>
-<header id="have-you-seen-the-new-vid">
+<header class="qna" id="have-you-seen-the-new-vid">
     <p class="q">
         Q: Have you seen the latest video?
     </p>

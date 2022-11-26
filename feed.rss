@@ -7,25 +7,31 @@
         
         
             <item>
-                <title>Dev beta needs testing</title>
-                <description>Testing needs to be done for the doors update. Download the latest beta at https://nightly.link/RosepadMC/Rosepad/workflows/main/master</description>
+                <title># Yet another website update</title>
+                <description>Also Discord, if you&#39;re not in yet</description>
+                <link>https://rosepadmc.github.io/news/5.html</link>
+            </item>
+        
+            <item>
+                <title># Dev beta needs testing</title>
+                <description>Testing needs to be done for the doors update. Download the latest beta at [here](https://nightly.link/RosepadMC/Rosepad/workflows/main/master)</description>
                 <link>https://rosepadmc.github.io/news/3.html</link>
             </item>
         
             <item>
-                <title>Release Candidates for 1.1.0.6 beta</title>
+                <title># Release Candidates for 1.1.0.6 beta</title>
                 <description>After months of development we&#39;ve finally decided to test things</description>
                 <link>https://rosepadmc.github.io/news/2.html</link>
             </item>
         
             <item>
-                <title>Website rewamp</title>
+                <title># Website rewamp</title>
                 <description>Did you know you could use EJS for XML? Now you do</description>
                 <link>https://rosepadmc.github.io/news/1.html</link>
             </item>
         
             <item>
-                <title>Rosepad website released!</title>
+                <title># Rosepad website released!</title>
                 <description>Cuz y not</description>
                 <link>https://rosepadmc.github.io/news/0.html</link>
             </item>
